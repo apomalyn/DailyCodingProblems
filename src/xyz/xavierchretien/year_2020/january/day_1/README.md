@@ -1,4 +1,4 @@
-# Coding problem of the 1th January 2020
+# Coding problem of the 1st January 2020
 
 ## Details
 - Asked by: Spotify
