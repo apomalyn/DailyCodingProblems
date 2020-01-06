@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
 /**
  * Determine how many ways it is possible to throw N dices with the number of faces each to get the total
  *
+ * Use dynamic programming to determine the number of possible ways
  * @param N, number of dices
  * @param faces, number of faces of each dices
  * @param total, sum of the dices we would like to get

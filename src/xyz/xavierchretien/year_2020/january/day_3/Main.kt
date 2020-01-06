@@ -4,6 +4,12 @@ fun main() {
     println(parseAndCalcul("-1+(2+3)"))
 }
 
+/**
+ * Parse and calculate the string passed in param
+ *
+ * @param calculation
+ * @return result of the calculation
+ */
 fun parseAndCalcul(calculation: String): Int {
     var result = 0
 
