@@ -9,9 +9,9 @@ fun main(args: Array<String>) {
  *
  * Use dynamic programming to determine the number of possible ways
  * @param N, number of dices
- * @param faces, number of faces of each dices
- * @param total, sum of the dices we would like to get
- * @return : Int, number of ways
+ * @param faces, number of faces of each dice
+ * @param total, the sum of the dices we would like to get
+ * @return Int, number of ways
  */
 fun throw_dice(N: Int, faces: Int, total: Int): Int {
     val subProblems = Array(N+1) { IntArray(total+1) { 0 } }

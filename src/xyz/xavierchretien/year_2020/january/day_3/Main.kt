@@ -1,7 +1,7 @@
 package xyz.xavierchretien.year_2020.january.day_3
 
 fun main() {
-    println(parseAndCalcul("-1+(2+3)"))
+    println(parseAndCalculation("-1+(2+3)"))
 }
 
 /**
@@ -10,7 +10,7 @@ fun main() {
  * @param calculation
  * @return result of the calculation
  */
-fun parseAndCalcul(calculation: String): Int {
+fun parseAndCalculation(calculation: String): Int {
     var result = 0
 
     var multiplier = 1
@@ -23,7 +23,7 @@ fun parseAndCalcul(calculation: String): Int {
                 '-' -> multiplier = -1
                 '(' -> subProblem = index
                 ')' -> {
-                    result += multiplier * parseAndCalcul(calculation.substring(subProblem + 1, index))
+                    result += multiplier * parseAndCalculation(calculation.substring(subProblem + 1, index))
                     subProblem = -1
                 }
                 else -> result += multiplier * c.toString().toInt()

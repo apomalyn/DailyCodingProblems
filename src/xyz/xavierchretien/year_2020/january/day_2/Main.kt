@@ -8,20 +8,20 @@ fun main() {
 }
 
 /**
- * Find each fixed points in a sorted array.
+ * Find each fixed point in a sorted array.
  *
  * @param array, sorted array
- * @return an list with each fixed points, the list is empty if there is no fixed points.
+ * @return the first fixed point found, null if there is no fixed point.
  */
-fun findFixedPoint(array: IntArray): List<Int>{
-    if(array[1] < array[0]) throw IllegalArgumentException("Array not sorted")
-
+fun findFixedPoint(array: IntArray): Int? {
     val pointFixedFound = mutableListOf<Int>()
+
     for ((index, value) in array.withIndex()) {
         if(index == value){
-            pointFixedFound.add(index)
+            return index
+        } else if (value > index) {
+            break
         }
     }
-
-    return pointFixedFound.toList()
+    return null
 }
