@@ -23,11 +23,10 @@ fun main() {
 fun lookAndSayAt(n: Int): String {
     if(n < 1) return ""
     else if(n == 1) return "1"
-    else if(n == 2) return "11"
 
-    var scanningTerm = "11"
+    var scanningTerm = "1"
 
-    for (i in 2 until n) {
+    for (i in 1 until n) {
         var currentTerm = ""
 
         var currentValue = scanningTerm[0]
@@ -44,7 +43,6 @@ fun lookAndSayAt(n: Int): String {
         currentTerm += "$numberOfCurrentValue$currentValue"
         scanningTerm = currentTerm
     }
-
     return scanningTerm
 }
 
